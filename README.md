@@ -1,3 +1,3 @@
-# Desarrollo-e-soft
+# Pagina para reventa de Zapatillas 
+# Unicamente esta el inicio ( index.html)
 
-#practica 1 de git
