@@ -1,12 +1,1001 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href = "header.css">
+
 </head>
+
+<header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <nav class="navbar">
+    <section class="container">
+      <div class="logo">
+        <i class="fa-solid fa-shop"></i>
+      </div>
+      <ul class="menu" style="padding-top: 12px;">
+        <li class="menu-list">
+          <a href="/NBP/index.php" class="menu-link">Home</a>
+        </li>
+        <li class="menu-list dropdown">
+          <a href="http://localhost/NBP/include/brands.php" class="menu-link">Brands <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://localhost/NBP/include/Jordan.php">Jordan</a></li>
+            <li><a href="http://localhost/NBP/include/Adidas.php">Adidas</a></li>
+            <li><a href="http://localhost/NBP/include/Nike.php">Nike</a></li>
+            <li><a href="http://localhost/NBP/include/Yeezy.php">Yeezy</a></li>
+ 
+            <style>
+              .navbar {
+  padding: 10px 10px;
+  width: 60%;
+  height: 25%;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 0px 20px rgba(227, 228, 237, 0.35);
+  border: 2px solid black;
+  border-radius: 8px;
+  margin-left:300px;
+  margin-bottom:20px;
+  
+}
+.dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      list-style: none;
+      padding: 10px 0;
+      margin: 0;
+      min-width: 150px;
+      z-index: 10;
+    }
+    .dropdown-menu li {
+      padding: 8px 16px;
+    }
+
+    .dropdown-menu li a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #f8f9fa;
+      color:blue;
+    }
+
+    .menu-list:hover .dropdown-menu {
+      display: block;
+    }
+
+            </style>
+          </ul>
+        </li>
+        <li class="menu-list">
+          <a href="" class="menu-link">About Us</a>
+        </li>
+        <li class="menu-list">
+          <a href="" class="menu-link">Contact</a>
+        </li>
+        <li class="menu-list">
+          <a href="" class="menu-link">Help</a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+
+
+<style>
+    /* google fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  height: 25%;
+}
+
+.logo i {
+  font-size: 30px;
+  color: black;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 2;
+
+}
+
+.menu-link {
+  font-weight: 600;
+  color: black;
+  font-size: 16px;
+  width: calc(100% / 5);
+  border-radius: 5px;
+  transition: color 0.3s ease;
+
+}
+
+.menu-link:hover {
+  color: blue;
+}
+
+.logo {
+  flex: 0.5;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
+  .navbar {
+    width: 100%;
+    
+  }
+
+  .logo i {
+    font-size: 25px;
+  }
+
+  .menu-list {
+    margin-left: 5px;
+  }
+
+  .menu-link {
+    font-size: 14px;
+  }
+}
+
+
+#background-video {
+  position: relative;
+  top: 25;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /*esto es pa ponelo detras de todas las cosas*/
+}
+
+
+.capa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 0;
+}
+
+
+</style>
 <body>
-    <h1>Camargo</h1>
+<div class="luz">
+    <div class="luz__indicator">
+      <div class="luz__icon-container">
+        <i class="luz__icon fa-solid"></i>
+      </div>
+    </div>
+  </div>
+<style>
+    :root{
+  /* COLORS */
+  --color: #9176FF;
+  --dark-color:rgb(0, 0, 0);
+  --dark-icon-color: #fff;
+  --light-color: #f7f7f7;
+  --light-icon-color: #FFDE59;
+}
+
+/* ------------ BASE ------------ */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--light-color);
+}
+
+/* -------------- BUTTON -------------- */
+.luz{
+  background-color: #fff;
+  width: 6.5em;
+  height: 3em;
+  border-radius: 10em;
+  padding: 0 0.5em;
+
+  box-shadow: inset 0 8px 60px rgba(0,0,0, .1),
+              inset 0 8px 8px rgba(0,0,0, .1),
+              inset 0 -4px 4px rgba(0,0,0, .1);
+
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  margin-left:90%;
+  margin-top:-60px;
+  z-index: 3;
+}
+
+.luz__indicator{
+  background-color: #fff;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+
+  position: absolute;
+
+  box-shadow: 0 8px 40px rgba(0,0,0, .2);
+
+  transition: transform .3s ease;
+}
+
+.luz__icon-container{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.luz__icon{
+  color: var(--light-icon-color);
+  font-size: 3rem;
+}
+
+/* -------------- ANIMATION ------------ */
+.luz__icon.animated{
+  animation: spin 0.5s;
+}
+
+@keyframes spin{
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------------- DARKMODE -------------- */
+body.darkmode{
+  background-color: var(--dark-color);
+ 
+}
+
+.darkmode .luz{
+  box-shadow: inset 0 8px 60px rgba(0,0,0, .3),
+              inset 8px 0 8px rgba(0,0,0, .3),
+              inset 0 -4px 4px rgba(0,0,0, .3);
+}
+
+.darkmode .luz__indicator{
+  transform: translateX(3em);
+  background-color: var(--dark-color);
+  box-shadow: 0 8px 40px rgba(0,0,0, .3);
+}
+
+.darkmode .luz__icon{
+  color: var(--dark-icon-color);
+}
+
+.darkmode .menu-list .menu-link .dropdown-menu  {
+  color: white; /* Cambia el texto negro a blanco */
+}
+</style>
+  <script>
+// Elementos seleccionados
+const body = document.querySelector('body');
+const btn = document.querySelector('.luz');
+const icon = document.querySelector('.luz__icon');
+
+// Elementos que deben cambiar en modo oscuro
+const elementosNegros = document.querySelectorAll('.menu-link, .dropdown-menu .logo');
+const elementosBlancos = document.querySelectorAll('.fondo-blanco, .header, .footer'); // Modifica los selectores según tu HTML
+
+// Guarda el estado del modo oscuro en localStorage
+function store(value) {
+  localStorage.setItem('darkmode', value);
+}
+
+// Carga y aplica el estado inicial del modo oscuro
+function load() {
+  const darkmode = localStorage.getItem('darkmode');
+
+  if (darkmode === 'true') {
+    activarModoOscuro();
+  } else {
+    desactivarModoOscuro();
+  }
+}
+
+// Activa el modo oscuro
+function activarModoOscuro() {
+  body.classList.add('darkmode');
+  icon.classList.replace('fa-sun', 'fa-moon');
+
+  // Cambia los estilos de los elementos dinámicamente
+  elementosNegros.forEach((elemento) => {
+    elemento.style.color = 'white';
+  });
+
+  elementosBlancos.forEach((elemento) => {
+    elemento.style.backgroundColor = 'black';
+    elemento.style.color = 'white';
+  });
+
+  store('true');
+}
+
+// Desactiva el modo oscuro
+function desactivarModoOscuro() {
+  body.classList.remove('darkmode');
+  icon.classList.replace('fa-moon', 'fa-sun');
+
+  // Restaura los estilos predeterminados
+  elementosNegros.forEach((elemento) => {
+    elemento.style.color = 'black';
+  });
+
+  elementosBlancos.forEach((elemento) => {
+    elemento.style.backgroundColor = 'white';
+    elemento.style.color = 'black';
+  });
+
+  store('false');
+}
+
+// Alterna el modo oscuro al hacer clic en el botón
+btn?.addEventListener('click', () => {
+  if (body.classList.contains('darkmode')) {
+    desactivarModoOscuro();
+  } else {
+    activarModoOscuro();
+  }
+
+  // Efecto animado en el icono
+  icon.classList.add('animated');
+  setTimeout(() => {
+    icon.classList.remove('animated');
+  }, 500);
+});
+
+// Estilos para la animación (asegúrate de incluir esto en tu CSS)
+/*
+.animated {
+  transition: transform 0.3s;
+  transform: rotate(360deg);
+}
+*/
+
+// Carga el estado inicial
+load();
+
+
+
+  </script>
+
+
+<video id="background-video"autoplay muted loop>
+    <source src="./edits para la pagina/Air Jordan 4 Retro Midnight Navy - 360º view.mp4" type="video/mp4">
+</video>
+
+
+<h1 class="title-shop">SHOP</h1>
+        <main class="main bd-grid">
+            <article class="card">
+                <div class="card__img">
+                    <img class="uno" src="./imagenes/jordan-4-bred.png" alt="">
+                </div>
+                <div class="card__name">
+                    <p>Jordan Retro 4 Bred</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    
+                    <div>
+                        <span class="card__preci card__preci--before">$990.00</span>
+                        <span class="card__preci card__preci--now">$749.00</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img class="dos" src="./imagenes/jordan-4-fire-removebg-preview.png" alt="">
+                </div>
+                <div class="card__name">
+                    <p>AIR ZOOM PEGASUS</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    <div>
+                        <span class="card__preci card__preci--before">$990.00</span>
+                        <span class="card__preci card__preci--now">$749.00</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img class="tres" src="./imagenes/Adidas/bad bunny negra.png" alt="">
+                </div>
+                <div class="card__name">
+                    <p>AIR ZOOM PEGASUS</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    
+                    <div>
+                        <span class="card__preci card__preci--before">$990.00</span>
+                        <span class="card__preci card__preci--now">$749.00</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img class="cuatro" src="./imagenes/jordan-4-bred.png" alt="">
+                </div>
+                <div class="card__name">
+                    <p>AIR ZOOM PEGASUS</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    
+                    <div>
+                        <span class="card__preci card__preci--before">$990.00</span>
+                        <span class="card__preci card__preci--now">$749.00</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+        </main>
+          <footer>
+          
+          </footer>
+        <!-- ICONS -->
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/*-- VARIABLES CSS--*/
+/*Colores*/
+:root{
+    --first-color: #E3F8FF;
+    --second-color:rgb(220, 228, 251);
+    --third-color:rgb(254, 255, 223);
+    --fourth-color:rgb(255, 223, 223);
+    --accent-color: #FF5151;
+    --dark-color: #161616;
+}
+
+/*Tipografia responsive*/
+:root{
+    --body-font: 'Open Sans';
+    --h1-font-size: 1.5rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --smaller-font-size: 0.75rem;
+}
+@media screen and (min-width: 768px){
+    :root{
+        --h1-font-size: 2rem;
+        --normal-font-size: 1rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+/*-- BASE --*/
+*,::after,::before{
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: var(--h1-font-size);
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+}
+
+/*-- LAYAOUT --*/
+.main {
+    padding: 2rem 0;
+}
+.bd-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 1200px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*-- PAGES --*/
+.title-shop{
+    position: relative;
+    margin: 0 2.5rem;
+}
+.title-shop::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 72px;
+    height: 2px;
+    background-color: var(--dark-color);
+    margin-left: .25rem;
+}
+
+/*-- COMPONENT --*/
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+article:nth-child(1){
+    background-color: var(--first-color);
+}
+article:nth-child(2){
+    background-color: var(--second-color);
+}
+article:nth-child(3){
+    background-color: var(--third-color);
+}
+article:nth-child(4){
+    background-color: var(--fourth-color);
+}
+.card__img{
+    width: 180px;
+    height: auto;
+    padding: 3rem 0;
+    transition: .5s;
+}
+.card__name{
+    position: absolute;
+    left: -25%;
+    top: 0;
+    width: 3.5rem;
+    height: 100%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    background-color: var(--dark-color);
+    color: #fff;
+    font-weight: bold;
+    transition: .5s;
+}
+.card__icon{
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+.card__icon:hover{
+    color: var(--accent-color);
+}
+.card__precis{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: .5s;
+}
+.card__preci{
+    display: block;
+    text-align: center;
+}
+.card__preci--before{
+    font-size: var(--smaller-font-size);
+    color: var(--accent-color);
+    margin-bottom: .25rem;
+}
+.card__preci--now{
+    font-size: var(--h3-font-size);
+    font-weight: bold;
+}
+/*Move left*/
+.card:hover{
+    box-shadow: 0 .5rem 1rem #D1D9E6;
+}
+.card:hover .card__name{
+    left: 0;
+}
+.card:hover .card__img{
+    transform: rotate(30deg);
+    margin-left: 3.5rem;
+}
+.card:hover .card__precis{
+    margin-left: 3.5rem;
+    padding: 0 1.5rem;
+}
+
+/*-- FOOTER --*/
+
+footer{
+  text-align: center;
+}
+
+/*-- MEDIA QUERIES --*/
+@media screen and (min-width: 1200px){
+    
+    .title-shop{
+        margin: 0 5rem;
+    }
+    .bd-grid{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+</style>
+    <a href="http://localhost/NBP/include/brands.php">
+  <button class="btn">
+    More
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px" class="icon">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" stroke="#292D32" d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008"></path>
+    </svg>
+  </button>
+</a>
+
+
+    <style>
+       .btn {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  position: relative;
+  background-color: transparent;
+  transition: .2s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0.6;
+  margin-left:999px;
+}
+
+.btn::after {
+  content: '';
+  border-bottom: 3px double rgb(214, 207, 113);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  margin-top: -5px;
+  top: 0;
+  left: 5px;
+  visibility: hidden;
+  opacity: 1;
+  transition: .2s linear;
+}
+
+.btn .icon {
+  transform: translateX(0%);
+  transition: .2s linear;
+  animation: attention 1.2s linear infinite;
+  stroke: black; /* Color del ícono por defecto */
+}
+
+.btn:hover::after {
+  visibility: visible;
+  width: 90%;
+  
+}
+
+.btn:hover {
+  letter-spacing: 2px;
+  color:black;
+}
+
+.btn:hover > .icon {
+  transform: translateX(30%);
+  animation: none;
+}
+
+@keyframes attention {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(30%);
+  }
+}
+body.darkmode .btn {
+  color: white; /* Cambiar texto del botón a blanco */
+}
+
+body.darkmode .btn .icon {
+  stroke: white; /* Cambiar el color del ícono a blanco */
+}
+    </style>
 </body>
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+        <h3>NBP<span>Store</span></h3>
+
+        <p class="footer-links">
+        <a href="index.html">Inicio</a>
+          |
+          <a href="Nosotros.php">Nosotros</a>
+          |
+          <a href="contacto.php">Contacto</a>
+          |
+          <a href="registro.php">Registrate ✅</a>
+        </p>
+
+        <p class="footer-company-name">Copyright © 2024 <strong></strong> Todos los derechos reservados NBP Store </p>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span></span>
+                Llamanos al</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+57 111-222-3333</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:sagar00001.co@gmail.com">anonimo@gmail.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>Sobre la Pagina</span>
+            <strong>NBP Store</strong> es una página destinada a la reventa de sneakers exclusivos y ediciones
+             limitadas, ofreciendo a sus clientes productos auténticos, de alta calidad y difíciles de encontrar en el mercado convencional. Nuestro objetivo es conectar a los apasionados 
+            por la cultura sneaker con las tendencias más recientes y lo
+            s modelos más icónicos, garantizando una experiencia de compra 
+            confiable y segura.</p>
+        <style>
+             footer {
+    position: fixed;
+    bottom: 0;
+  }
+  .footer-icons img{
+    width: 45px;
+  }
+  @media (max-height:800px) {
+    footer {
+        position: static;
+    }
+    header {
+        padding-top: 40px;
+    }
+  }
+  
+  .footer-distributed {
+    background-color: rgb(218, 218, 218);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+  }
+  
+  .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* Footer left */
+  
+  .footer-distributed .footer-left {
+    width: 30%;
+  }
+  
+  .footer-distributed h3 {
+    color:rgb(0, 0, 0);
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+  }
+  
+  
+  .footer-distributed h3 span {
+    color: blue; /*color de texto 1*/
+  }
+  
+  /* Footer links */
+  
+  .footer-distributed .footer-links {
+    color:rgb(0, 0, 0);
+    margin: 20px 0 12px;
+  }
+  
+  .footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .footer-distributed .footer-company-name {
+    color:rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  /* Footer Center */
+  
+  .footer-distributed .footer-center {
+    width: 35%;
+  }
+  
+  .footer-distributed .footer-center i {
+    background-color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  
+  .footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+  }
+  
+  .footer-distributed .footer-center p {
+    display: inline-block;
+    color:rgb(0, 0, 0);
+    vertical-align: middle;
+    margin: 0;
+  }
+  
+  .footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+  }
+  
+  .footer-distributed .footer-center p a {
+    color: blue; /*color del texto del correo*/
+    text-decoration: none;
+    ;
+  }
+  
+  /* Footer Right */
+  
+  .footer-distributed .footer-right {
+    width: 30%;
+  }
+  
+  .footer-distributed .footer-company-about {
+    line-height: 20px;
+    color:rgb(0, 0, 0);
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .footer-distributed .footer-company-about span {
+    display: block;
+    color:rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+ 
+  .footer-distributed .footer-icons {
+    margin-top: 15px;
+  }
+  
+  .footer-distributed .footer-icons a {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 3px;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    line-height: 15px;
+    margin-left: 40px;
+    
+  }
+  .footer-distributed .footer-icons a:nth-child(1) {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 3px;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    line-height: 15px;
+    margin-left: 40px;
+    filter: drop-shadow(0px 0px 20px blue);
+    
+  }
+  .footer-distributed .footer-icons a:nth-child(2) {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 3px;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    line-height: 15px;
+    margin-left: 40px;
+    filter: drop-shadow(0px 0px 20px orange);
+    
+  }
+  .footer-distributed .footer-icons a:nth-child(3) {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 3px;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    line-height: 15px;
+    margin-left: 40px;
+    filter: drop-shadow(0px 0px 20px red);
+    
+  }
+  
+  
+  .footer-links a:hover {
+    color: #3F71EA;
+  }
+  
+  @media (max-width: 880px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+  }       
+  
+        </style>
+    </div>
+</footer>
 </html>
